@@ -24,7 +24,8 @@ createServer({
   },
 
   routes() {
-    this.passthrough("https://finance-control-jade.vercel.app/")
+    // this.passthrough("https://finance-control-jade.vercel.app/")
+    this.urlPrefix = 'https://localhost:3000';
     this.namespace = 'api';
 
     this.get('/transactions', () => this.schema.all('transaction'))
