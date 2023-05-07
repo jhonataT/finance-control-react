@@ -10,21 +10,11 @@ createServer({
 
   seeds(server) {
     server.db.loadData({
-      transactions: [
-        {
-          id: 1,
-          title: 'Freelance de website',
-          type: 'deposit',
-          category: 'Dev',
-          amount: 6000,
-          createdAt: new Date('2023-04-01 09:00:00')
-        }
-      ]
+      transactions: []
     })
   },
 
   routes() {
-    // this.passthrough("https://finance-control-jade.vercel.app/")
     this.urlPrefix = 'https://localhost:3000';
     this.namespace = 'api';
 
