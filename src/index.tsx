@@ -24,7 +24,7 @@ createServer({
   },
 
   routes() {
-    this.urlPrefix = 'https://finance-control-jade.vercel.app';
+    this.passthrough("https://finance-control-jade.vercel.app/")
     this.namespace = 'api';
 
     this.get('/transactions', () => this.schema.all('transaction'))
