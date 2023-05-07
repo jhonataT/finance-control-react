@@ -9,7 +9,6 @@ createServer({
   },
 
   seeds(server) {
-    this.urlPrefix = 'https://finance-control-jade.vercel.app';
     server.db.loadData({
       transactions: [
         {
@@ -25,6 +24,7 @@ createServer({
   },
 
   routes() {
+    this.urlPrefix = 'https://finance-control-jade.vercel.app';
     this.namespace = 'api';
 
     this.get('/transactions', () => this.schema.all('transaction'))
