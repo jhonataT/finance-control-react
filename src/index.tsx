@@ -9,6 +9,7 @@ createServer({
   },
 
   seeds(server) {
+    this.urlPrefix = 'https://finance-control-jade.vercel.app';
     server.db.loadData({
       transactions: [
         {
